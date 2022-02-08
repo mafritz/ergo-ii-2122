@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <title>Livrables | ERGO II 2021/2022</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-warning sticky-top border-bottom border-gray shadow-sm fw-bold"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="./"
+          >ERGO II <span class="badge bg-dark">2021/2022</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item me-2">
+              <a class="nav-link" href="./">Accueil</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="./objectifs.html">Objectifs</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="./programme.html">Programme</a>
+            </li>
+            <li class="nav-item me-2">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./livrables.html"
+                >Livrables</a
+              >
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="./support.html">Support</a>
+            </li>
+            <li class="nav-item me-0">
+              <a
+                href="https://github.com/mafritz/ergo-ii-2021"
+                class="nav-link"
+              >
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-4">
+      <p class="alert alert-danger fw-bold">
+        <i class="fa fa-exclamation-triangle"></i>
+        Le contenu de cette page peut être modifié. Dernière mise à jour
+        18.03.2021 à 12:00
+      </p>
+      <h1 class="display-3">Livrables</h1>
+      <p class="lead mt-3">
+        Cette page présente les différentes livrables prévus pendant le travail
+        à distance.
+      </p>
+    </div>
+
+    <!-- Délais -->
+    <div
+      class="bg-light my-5 py-5 border-top border-bottom border-gray shadow-sm"
+    >
+      <div class="container">
+        <section>
+          <h2 class="display-5">
+            Vue synoptique et échéancier
+            <span class="badge bg-success">confirmé</span>
+          </h2>
+          <!-- Tableau récapitulatif -->
+          <div class="table-responsive">
+            <table class="table table-striped align-middle">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-center">#</th>
+                  <th scope="col">Date</th>
+                  <th scope="col" class="text-center">Horaire</th>
+                  <th scope="col" class="text-center">Type</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Évaluation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- V1 + Scénario -->
+                <tr>
+                  <th scope="row">
+                    <a
+                      href="#livrable-maquette-scenario"
+                      class="btn btn-outline-danger btn-sm"
+                      >1 <i class="fa fa-chevron-circle-down"></i
+                    ></a>
+                  </th>
+                  <td>Dimanche 7 mars</td>
+                  <td class="text-center">21:00</td>
+                  <td class="text-center"><i class="fa fa-users"></i></td>
+                  <td>
+                    Première version de la maquette interactive et scénario test
+                    utilisateur
+                  </td>
+                  <td>Formative. Feu vert pour le test le lundi 8 mars.</td>
+                </tr>
+                <!-- Première version prototype mobile -->
+                <tr>
+                  <th scope="row">
+                    <a
+                      href="#livrable-premier-prototype-mobile"
+                      class="btn btn-outline-danger btn-sm"
+                      >2 <i class="fa fa-chevron-circle-down"></i
+                    ></a>
+                  </th>
+                  <td>Mardi 9 mars</td>
+                  <td class="text-center">21:00</td>
+                  <td class="text-center"><i class="fa fa-user"></i></td>
+                  <td>Première version du prototype mobile.</td>
+                  <td>Formative</td>
+                </tr>
+                <!-- Prototype mobile -->
+                <tr>
+                  <th scope="row">
+                    <a
+                      href="#livrable-prototype-mobile"
+                      class="btn btn-outline-danger btn-sm"
+                      >3 <i class="fa fa-chevron-circle-down"></i
+                    ></a>
+                  </th>
+                  <td>Dimanche 14 mars</td>
+                  <td class="text-center">21:00</td>
+                  <td class="text-center"><i class="fa fa-user"></i></td>
+                  <td>Prototype mobile</td>
+                  <td>Sommative. Acquis/Partiellement acquis/Non acquis</td>
+                </tr>
+                <!-- Rapport test individuel -->
+                <tr>
+                  <th scope="row">
+                    <a
+                      href="#livrable-rapport-individuel"
+                      class="btn btn-outline-danger btn-sm"
+                      >4 <i class="fa fa-chevron-circle-down"></i
+                    ></a>
+                  </th>
+                  <td>Mardi 16 mars</td>
+                  <td class="text-center">21:00</td>
+                  <td class="text-center"><i class="fa fa-user"></i></td>
+                  <td>
+                    Rapport du test utilisateur sur la première version de la
+                    maquette
+                  </td>
+                  <td>Sommative. 50% de la note finale.</td>
+                </tr>
+                <!-- Proposition test A/B -->
+                <tr>
+                  <th scope="row">
+                    <a
+                      href="#livrable-proposition-ab"
+                      class="btn btn-outline-danger btn-sm"
+                      >5 <i class="fa fa-chevron-circle-down"></i
+                    ></a>
+                  </th>
+                  <td>Jeudi 18 mars</td>
+                  <td class="text-center">21:00</td>
+                  <td class="text-center"><i class="fa fa-user"></i></td>
+                  <td>
+                    Proposition d'un test A/B fictif pour obtenir un jeu de
+                    données
+                  </td>
+                  <td>Formative. Obtention des données fictives le 19 mars.</td>
+                </tr>
+                <!-- Rapport test A/B -->
+                <tr>
+                  <th scope="row">
+                    <a
+                      href="#livrable-rapport-ab"
+                      class="btn btn-outline-danger btn-sm"
+                      >6 <i class="fa fa-chevron-circle-down"></i
+                    ></a>
+                  </th>
+                  <td>Jeudi 25 mars</td>
+                  <td class="text-center">21:00</td>
+                  <td class="text-center"><i class="fa fa-user"></i></td>
+                  <td>Rapport test A/B fictif</td>
+                  <td>Sommative. Acquis/Partiellement acquis/Non acquis</td>
+                </tr>
+                <!-- Rapport final -->
+                <tr>
+                  <th scope="row">
+                    <a
+                      href="#livrable-rapport-final"
+                      class="btn btn-outline-danger btn-sm"
+                      >7 <i class="fa fa-chevron-circle-down"></i
+                    ></a>
+                  </th>
+                  <td>Dimanche 28 mars</td>
+                  <td class="text-center">21:00</td>
+                  <td class="text-center"><i class="fa fa-users"></i></td>
+                  <td>
+                    Deuxième version de la maquette et rapport final pour
+                    commanditaire
+                  </td>
+                  <td>Sommative. 50% de la note finale.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="display-5">Détails des livrables</h2>
+      <p class="lead">
+        Cette section illustre les consignes pour les différents livrables.
+      </p>
+      <p class="alert alert-warning">
+        <i class="fa fa-exclamation-triangle"></i>
+        <strong
+          >Les modalités de rendu sont illustrées dans l'espace Moodle du
+          cours.</strong
+        >
+      </p>
+
+      <!-- Première version de la maquette et scénario -->
+      <section
+        class="border border-dark p-5 mb-5"
+        id="livrable-maquette-scenario"
+      >
+        <h3>
+          #1 <i class="fa fa-users"></i> Première version de la maquette
+          interactive et protocole du test utilisateur
+        </h3>
+        <p class="lead">
+          Ce livrable vous permet de jeter les bases pour vos tests utilisateurs
+          avec la préparation de la maquette interactive et du
+          scénario/protocole de passation.
+        </p>
+        <h4>Consignes</h4>
+        <p>
+          Créez et publiez à travers le logiciel Axure une maquette interactive
+          présentant les caractéristiques suivantes :
+        </p>
+        <ul>
+          <li>
+            Créez entre 20 et 30 pages de votre site selon l'architecture de
+            l'information du projet ERGO I
+          </li>
+          <li>Créez les contenus textuels et graphiques des pages</li>
+          <li>
+            Reliez les pages avec un menu de navigation et/ou des liens
+            hypertextuels dans les contenus des pages
+          </li>
+        </ul>
+
+        <p>
+          Pour le scénario du test utilisateur, rédigez un protocole de
+          passation que vous garderez avec vous pendant les tests. Ce protocole
+          doit contenir les éléments suivants :
+        </p>
+        <ul>
+          <li>
+            Un message d'accueil et les informations nécessaires pour les
+            utilisateurs (e.g. durée du test, ...) Soyez clair-es et précis-es.
+          </li>
+          <li>
+            Une mise en situation basée sur l'activité <em>persona</em> de ERGO
+            I
+          </li>
+          <li>Un test de 5 seconds</li>
+          <li>
+            La description de 4 ou 5 tâches cohérentes avec les finalités de
+            votre projet et la mise en situation à partager avec les
+            participants.
+          </li>
+          <li>
+            Les actions nécessaires pour résoudre les tâches. En cas de
+            plusieurs possibilités, décrivez la solution plus rapide/optimale.
+          </li>
+          <li>
+            La passation d'une échelle/questionnaire UX (e.g. UEQ, AttrakDiff,
+            SUS, ...)
+          </li>
+          <li>
+            Un entretien post-test avec des questions pour mieux aborder
+            certains détails du test.
+          </li>
+          <li>Un débriefing final avec rémerciements.</li>
+        </ul>
+
+        <h4>Contraintes</h4>
+        <p>
+          Votre maquette interactive doit respecter les contraintes suivantes :
+        </p>
+        <ul>
+          <li>
+            Les deux personnes du binôme doivent participer à la création des
+            pages et contenus
+          </li>
+          <li>
+            Vous devez publier la maquette à travers le système de publication
+            de Axure. Si le contenu de votre site l'exige, vous pouvez protéger
+            la maquette avec un mot de passe.
+          </li>
+          <li>
+            Vos pages doivent présenter des contenus suffisamment aboutis pour
+            que votre test utilisateur soit informatif. N'utilisez pas de
+            <em>placeholders</em> trop évidents et qui ne servent à rien.
+          </li>
+          <li>
+            Si votre site propose des fonctionnalités dynamiques (e.g. blog),
+            créez les pages seulement si elles sont nécessaires au test
+            utilisateur. Autrement, placez un message qui informe l'utilisateur
+            que la fonctionnalité n'est pas implémentée.
+          </li>
+        </ul>
+
+        <p>
+          Votre scénario du test utilisateur doit respecter les contraintes
+          suivantes :
+        </p>
+        <ul>
+          <li>Planifier une durée du test entre 15 et 20 minutes maximum</li>
+          <li>
+            Vos passations doivent être enregistrées audio/vidéo. Pensez à
+            informer les utilisateurs lorsque vous prenez RDV avec eux pour
+            éviter des désistements à la dernière minute par des personnes qui
+            ne sont pas à l'aise avec l'enregistrement.
+          </li>
+          <li>
+            Vous devez faire passer le test complet (à l'exception du test des 5
+            seconds, voir point suivant) à 3 utilisateurs du public cible pour
+            chaque personne du binôme (donc 6 au total).
+          </li>
+          <li>
+            Vous devez faire passer le test des 5 seconds à au moins 3
+            utilisateurs pour chaque personne du binôme (donc au moins 6 au
+            total). Ces personnes peuvent être les mêmes des tâches ou d'autres
+            personnes. S'il ne s'agit pas des mêmes personnes, pensez à bien le
+            noter en prévision du rapport individuel/final.
+          </li>
+          <li>
+            Les passations sont individuelles pour chaque personne du binôme et
+            les résultats du test seront d'abord traités de manière indépendante
+            dans le rapport individuel. Votre collègue peut assister, mais sans
+            intervenir activement.
+          </li>
+          <li>
+            Vos tâches doivent prévoir une solution atteignables à travers les
+            manipulations et informations disponibles dans votre maquette.
+            Évitez les instructions directes et donnez à l'utilisateur le
+            contrôle de la situation.
+          </li>
+          <li>
+            Chaque tâche doit commencer depuis la page d'accueil de votre site.
+            Si l'utilisateur a déjà trouvé l'informations dans une tâche
+            précédente, demandez-lui de répéter quand même les manipulations.
+          </li>
+        </ul>
+
+        <p class="alert alert-warning">
+          <i class="fa fa-exclamation-triangle"></i>
+          Avant d'entamer le test, vous devez avoir reçu le feu vert de l'équipe
+          enseignante.
+        </p>
+
+        <h4>Conseils</h4>
+        <p>Pour votre maquette interactive :</p>
+        <ul>
+          <li>
+            <strong
+              >Rappelez-vous du processus itératif du design centré
+              utilisateur</strong
+            >. Développez seulement les éléments fondamentaux à votre projet et
+            ne passez pas trop de temps sur les détails graphiques.
+          </li>
+          <li>
+            Esquissez d'abord sur papier et une fois convaincus, créez la
+            maquette avec Axure.
+          </li>
+          <li>
+            Utilisez le plus possible des composantes/éléments réutilisables
+            pour les parties communes des pages (e.g. menu de navigation,
+            header, footer).
+          </li>
+        </ul>
+
+        <p>Pour votre test utilisateur :</p>
+        <ul>
+          <li>
+            Créez deux documents de passation. Un complet de tous les détails
+            (i.e. celui que vous rendez pour le feu vert) et l'autre avec
+            seulement les informations nécessaires aux participants (mise en
+            situation et descriptif des tâches).
+          </li>
+          <li>
+            Vos participants doivent être représentatifs du public cible. Si
+            votre public cible est large, identifiez un sous-groupe plutôt
+            homogène. Pour que vos tests soient informatifs, il faut que vos
+            utilisateurs partagent des caractéristiques communes.
+          </li>
+          <li>
+            Évitez des professionnels du design ou du développement web, leur
+            perspective est souvent focalisée sur les détails de conception
+            plutôt que sur les contenus.
+          </li>
+          <li>
+            Évitez des personnes avec peu d'expérience avec le web ou vous
+            risquez que les résultats du test reflètent les difficultés
+            générales plutôt que les particularités de votre site.
+          </li>
+          <li>
+            Essayez de faire les passations le plus tôt possible, la rédaction
+            du rapport prend du temps.
+          </li>
+          <li>
+            Si vous êtes indécis sur deux variantes d'une même page, vous pouvez
+            éventuellement montrer la variante que vous n'avez pas incorporée
+            dans le test aux utilisateurs pour avoir un avis dans la phase
+            post-test.
+          </li>
+          <li>
+            Pendent le test, assumez une attitude bienveillante et accompagnez
+            les utilisateurs en fonction des caractéristiques d'un bon
+            facilitateur discutées pendant le cours intensif.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Première version mobile -->
+      <section
+        class="border border-dark p-5 mb-5"
+        id="livrable-premier-prototype-mobile"
+      >
+        <h3>
+          #2 <i class="fa fa-user"></i> Première version du prototype mobile
+        </h3>
+        <p class="lead">
+          Ce livrable vous permet de vous familiariser avec la conception
+          <em>mobile-first</em>.
+        </p>
+        <h4>Consignes</h4>
+        <p>
+          Créez une version mobile d'un site ou application web et enregistrez
+          en vidéo une séquence d'interactions qui montrent l'intérêt de votre
+          dispositif.
+        </p>
+        <p>
+          Choisissez entre deux options pour la création d'une version mobile
+          d'un site ou application web :
+        </p>
+        <ol>
+          <li>
+            Un prototype papier à dessiner à la main et à animer avec des
+            techniques <em>bricolage</em>
+          </li>
+          <li>
+            Une maquette interactive à développer avec l'outil de votre choix
+          </li>
+        </ol>
+
+        <p>Au niveau du contenu :</p>
+        <ul>
+          <li>
+            Vous pouvez faire la version mobile sur le même site du projet ou
+            sur un autre sujet de votre choix.
+          </li>
+          <li>
+            Vous pouvez faire un site informatif ou simuler une petite
+            application dont vous choisissez les finalités.
+          </li>
+        </ul>
+
+        <h4>Contraintes</h4>
+        <p>Dans les deux cas :</p>
+        <ul>
+          <li>
+            Créez entre 5 et 10 écrans maximum.
+            <strong
+              >Il ne s'agit pas d'une maquette aussi aboutie que pour le site
+              web !</strong
+            >
+          </li>
+          <li>
+            Envisagez la possibilité d'effectuer une action ou obtenir une
+            information saillante, pas simplement action de login ou
+            enregistrement sur une plateforme.
+          </li>
+          <li>
+            La vidéo de votre manipulation doit durer entre 30 et 60 seconds
+            maximum.
+          </li>
+          <li>
+            Vous pouvez expliquer ce que vous faites ou laisser les images sans
+            commentaire.
+          </li>
+          <li>
+            Publiez la vidéo sur une plateforme de streaming de votre choix, sur
+            le serveur tecfaetu.unige.ch, ou à travers un gestionnaire de
+            fichiers dans le cloud (e.g. OneDrive Unige, Switchdrive, ...).
+          </li>
+        </ul>
+
+        <p>Pour le prototype papier :</p>
+        <ul>
+          <li>
+            Aucune contrainte particulière, du moment qu'on reconnaît qu'il
+            s'agit d'un prototype pour mobile, vous pouvez
+            <em>bricoler</em> comme vous voulez
+          </li>
+        </ul>
+
+        <p>Pour la maquette interactive :</p>
+        <ul>
+          <li>
+            Vous pouvez utiliser encore Axure ou adopter un autre outil que vous
+            connaissez déjà ou que vous voulez explorer davantage.
+          </li>
+          <li>
+            Vous pouvez créer votre maquette interactive au degré de fidélité de
+            votre choix (e.g. low-fi ou high-fi).
+          </li>
+        </ul>
+
+        <h4>Conseils</h4>
+        <ul>
+          <li>
+            Mettez-vous dans l'esprit <em>mobile-first</em> et concentrez-vous
+            sur les aspects fonctionnels les plus importants.
+          </li>
+          <li>
+            Si vous gardez le même sujet du projet, vous pouvez par exemple
+            développer les actions nécessaires pour effectuer une ou deux tâches
+            de votre scénario test utilisateur et montrer les manipulations
+            nécessaires dans la version mobile.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Prototype mobile -->
+      <section
+        class="border border-dark p-5 mb-5"
+        id="livrable-prototype-mobile"
+      >
+        <h3>#3 <i class="fa fa-user"></i> Version finale prototype mobile</h3>
+        <p class="lead">
+          Suite aux feedbacks de l'équipe enseignante et de vos collègues,
+          modifiez la première version du prototype mobile et publier une
+          nouvelle vidéo avec la manipulation.
+        </p>
+        <h4>Consignes</h4>
+        <p>
+          Même consignes de la première version. Souvenez-vous de maintenir la
+          vidéo à la première version pour qu'on puisse comparer.
+        </p>
+        <h4>Contraintes</h4>
+        <p>Mêmes contraintes de la première version.</p>
+        <h4>Conseils</h4>
+        <p><strong>Optionnel</strong> :</p>
+        <ul>
+          <li>
+            Si vous pensez montrer la vidéo dans votre portfolio personnel, vous
+            pouvez éventuellement produire une page HTML5 avec la vidéo et
+            quelques informations complémentaires.
+          </li>
+          <li>
+            Si vous avez créé une maquette interactive et le logiciel de
+            prototypage le permet, vous pouvez l'ajouter dans la page pour que
+            les utilisateurs puissent tester directement.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Rapport individuel -->
+      <section
+        class="border border-dark p-5 mb-5"
+        id="livrable-rapport-individuel"
+      >
+        <h3>
+          #4 <i class="fa fa-user"></i> Rapport du test utilisateur sur la
+          première version de la maquette
+        </h3>
+        <p class="lead">
+          Le rapport individuel présente les résultats des passations que chaque
+          personne a effectuées de manière indépendante. Même si des parties du
+          rapport sont communes, à ce stade vous devez rédiger chacun pour son
+          compte.
+        </p>
+        <h4>Consignes</h4>
+        <p>
+          Rédigez un rapport qui illustre les tests utilisateurs que vous avez
+          effectués individuellement. Le rapport doit suivre les indications et
+          la structure du template fourni.
+        </p>
+        <p>
+          <a
+            href="./assets/docs/rapport-individuel-test-utilisateur.pdf"
+            class="btn btn-outline-danger"
+            ><i class="fa fa-download"></i> Template du rapport individuel</a
+          >
+        </p>
+
+        <h4>Contraintes</h4>
+        <p>Votre rapport doit respecter ces contraintes :</p>
+        <ul>
+          <li>
+            Dans la section
+            <strong>Analyse détaillée des problèmes majeurs</strong>, limitez
+            votre analyse à <strong>2 ou 3 problèmes maximum</strong> que vous
+            jugez les plus critiques. Vous n'êtes pas forcé-es à choisir les
+            mêmes problèmes de votre collègue. Au contraire, il serait mieux que
+            vous vous ne consultez pas sur cet aspect de manière à effectuer
+            deux analyses séparées et pouvoir par la suite les mettre en commun
+            pour le rapport final.
+          </li>
+          <li>
+            Au moins l'un problème analysés doit être accompagné par un extrait
+            vidéo de la passation d'un utilisateur d'une durée maximum de 60
+            seconds. Mettez le lien vers la vidéo dans le texte.
+          </li>
+          <li>
+            Votre rapport ne doit pas dépasser les <strong>6'000 mots</strong>.
+            Ne comptez pas dans le calcul la page de garde, la bibliographie,
+            les annexes et la partie autoscopique.
+          </li>
+          <li>
+            Votre rapport doit présenter une page de garde qui indique
+            clairement votre nom, la date de rédaction et l'intitulé du
+            document. Évitez d'intituler votre document
+            <strong><del>Rapport individuel</del></strong> et trouvez plutôt un
+            titre intéressant pour un commanditaire.
+          </li>
+          <li>
+            Vos titres de sections et vos pages doivent être numérotés. Évitez
+            les entêtes ou pieds de page sur toutes les pages.
+          </li>
+          <li>
+            Vos figures et tableaux doivent être numérotés et avec une légende.
+            Cette contrainte ne s'applique pas aux annexes.
+          </li>
+          <li>
+            Vous pouvez créer directement des liens dans le texte, mais ajoutez
+            également une note en bas de page à la fin du lien dans laquelle
+            vous mettez l'URL <em>in extensio</em>.
+          </li>
+          <li>
+            Citez correctement dans le texte et dans la section
+            références/bibliographie les ressources. Utilisez les normes
+            adoptées dans votre domaine académique ou professionnel (e.g. APA
+            pour étudiant-es MALTT).
+          </li>
+        </ul>
+
+        <h4>Conseils</h4>
+        <p>Quelques conseils pour rendre un bon travail :</p>
+        <ul>
+          <li>
+            Imaginez qu'il s'agit d'un document que vous partagez avec des
+            clients ou d'autres professionnels du UX.
+          </li>
+          <li>
+            Insérez dans le texte des éléments graphiques (e.g. captures
+            d'écran) seulement s'ils apportent vraiment de la valeur, si non
+            placez-les en annexe.
+          </li>
+          <li>
+            Vous aurez le droit de maintenir des parties de vos rapports
+            individuels respectifs dans le rapport final commun. Vous avez donc
+            un double intérêt à produire un bon rapport.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Proposition test A/B-->
+      <section class="border border-dark p-5 mb-5" id="livrable-proposition-ab">
+        <h3>
+          #5 <i class="fa fa-user"></i> Proposition d'un test A/B fictif pour
+          obtenir un jeu de données
+        </h3>
+        <p class="lead">
+          Ce livrable vous permet d'obtenir des données fictives en relation
+          avec les objectifs de votre test A/B afin de produire par la suite un
+          rapport sur la base de l'exemple vu pendant le cours.
+        </p>
+        <h4>Consignes</h4>
+        <p>
+          Construisez une proposition de test sur la base des éléments suivants
+          :
+        </p>
+        <ul>
+          <li>
+            Identifiez une page de votre projet ou d'un site existant sur
+            laquelle vous voulez effectuer votre test.
+          </li>
+          <li>
+            À l'intérieur de cette page, identifier un élément spécifique dont
+            vous voulez tester deux variantes. Il peut s'agit d'un bouton, d'une
+            image, de la position d'un élément, son style, ... À vous de voir.
+          </li>
+          <li>
+            Identifiez une mesure cohérente avec l'utilisation d'un site web qui
+            permet de déterminer l'impact de votre variation, comme par exemple
+            le temps de permanence sur une page, le temps de fixation d'un
+            élément, le nombre d'utilisateur qui ont effectué (ou pas) une
+            certaine action, ...
+          </li>
+          <li>Illustrez et justifiez vos attentes par rapport au test</li>
+        </ul>
+
+        <p>
+          Sur la base de votre proposition, vous recevrez un jeu de données
+          fictif qui vous permettra de mener un test statistique pour déterminer
+          si une variante génère des mesures plus intéressantes par rapport à
+          l'autre.
+        </p>
+
+        <h4>Contraintes</h4>
+        <p>
+          Aucune spécifique, du moment que vos versions et votre mesures sont
+          réalistes.
+        </p>
+
+        <h4>Conseils</h4>
+        <p>
+          Inspirez-vous des exemples vus pendant les cours et choisissez une
+          mesure que vous comprenez bien.
+        </p>
+      </section>
+
+      <!-- Rapport test A/B fictif -->
+      <section class="border border-dark p-5 mb-5" id="livrable-rapport-ab">
+        <h3>#6 <i class="fa fa-user"></i> Rapport test A/B fictif</h3>
+        <p class="lead">
+          Ce livrable vous permet de formaliser les résultats du test A/B
+          effectué avec les données fictives dans un rapport, dans lequel vous
+          formulez un avis d'intervention sur la base de ce même résultat.
+        </p>
+        <h4>Consignes</h4>
+        <p>
+          Rédigez un rapport similaire aux deux exemples vus pendant le cours et
+          que vous retrouvez également ici.
+        </p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a
+              href="./assets/docs/test-ab-fixation-time.pdf"
+              class="btn btn-outline-danger"
+            >
+              <i class="fa fa-download"></i> Rapport test A/B sur le temps de
+              fixation
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              href="./assets/docs/test-ab-subscribtion-click.pdf"
+              class="btn btn-outline-danger"
+            >
+              <i class="fa fa-download"></i> Rapport test A/B sur la fréquence
+              de clics sur un bouton
+            </a>
+          </li>
+        </ul>
+
+        <h4>Contraintes</h4>
+        <p>Le rapport doit respecter les contraintes suivantes :</p>
+        <ul>
+          <li>Longueur de 2 à 4 pages maximum.</li>
+          <li>
+            Les deux versions doivent figurer clairement, mais vous ne devez pas
+            forcément afficher toute la page du site ou l'interface de
+            l'application.
+          </li>
+          <li>
+            Le test statistique effectué ainsi que les résultats obtenus doivent
+            figurer de manière claire et avec les indices adéquats.
+          </li>
+        </ul>
+
+        <h4>Conseils</h4>
+        <p>Quelques conseils pour rendre un bon rapport :</p>
+        <ul>
+          <li>
+            Ne vous focalisez pas exclusivement sur la p-valeur. Regardez la
+            différence entre les deux versions et évaluez si cette différence
+            peut vraiment avoir des conséquences pratiques importantes.
+          </li>
+          <li>
+            Le rapport est moins formalisé des rapports individuels et final,
+            mais essayez néanmoins de rédiger un document qu'on puisse imaginer
+            de partager avec des clients.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Rapport final -->
+      <section class="border border-dark p-5 mb-5" id="livrable-rapport-final">
+        <h3>
+          #7 <i class="fa fa-user"></i> Deuxième version de la maquette et
+          rapport final
+        </h3>
+        <p class="lead">
+          Le rapport final vous permet d'illustrer l'ensemble de votre projet en
+          combinant les informations issues des tests utilisateurs effectués par
+          chaque membre du groupe. Ces informations sont utilisées pour apporter
+          des remédiations à votre première version de la maquette et en
+          proposer une deuxième.
+        </p>
+        <h4>Consignes</h4>
+
+        <p>
+          Pour le <strong>rapport final</strong> : rédigez un rapport de groupe
+          selon les indications et la structure du template fourni.
+        </p>
+        <p>
+          <a
+            href="./assets/docs/rapport-final.pdf"
+            class="btn btn-outline-danger"
+            ><i class="fa fa-download" aria-hidden="true"></i> Template du
+            rapport final</a
+          >
+        </p>
+
+        <p>
+          Pour la <strong>deuxième version de la maquette</strong> : apportez
+          des modifications à votre première version de la maquette selon les
+          éléments issus des tests utilisateurs.
+        </p>
+
+        <p class="alert alert-warning">
+          <strong
+            ><i class="fa fa-exclamation-triangle"></i> Publiez une nouvelle
+            maquette, en gardant la première version intacte afin qu'on puisse
+            comparer les deux versions.</strong
+          >
+        </p>
+
+        <h4>Contraintes</h4>
+
+        <p>
+          Pour le rapport final, mêmes contraintes du rapport individuel avec
+          ces exceptions :
+        </p>
+        <ul>
+          <li>
+            Votre rapport ne doit pas dépasser les <strong>9'000 mots</strong>
+          </li>
+          <li>
+            Aucune limite sur le nombre de problèmes majeurs à analyser dans la
+            section résultats
+          </li>
+          <li>
+            Ajoutez et justifiez les remédiations à la première version de la
+            maquette
+          </li>
+        </ul>
+
+        <p>
+          Pour la deuxième version de la maquette interactive, mêmes contraintes
+          de la première version avec ces exceptions :
+        </p>
+        <ul>
+          <li>
+            Tous les contenus de votre site doivent être aboutis, à l'exception
+            des fonctionnalités dynamiques qui ne peuvent pas être implémentées
+            dans une maquette interactive (e.g. moteur de recherche, ...)
+          </li>
+          <li>
+            Vous avez le droit d'enlever des pages si elles ne sont pas
+            suffisamment développées ou pertinentes, mais vous devez en tout cas
+            proposer au moins 15 pages dans une perspective
+            <em>minimum viable product</em>
+          </li>
+        </ul>
+
+        <h4>Conseils</h4>
+        <p>Pour le rapport final :</p>
+        <ul>
+          <li>
+            Vous avez le droit de reprendre <em>verbatim</em> des passages de
+            vos rapports individuels, surtout dans la section sur la
+            méthodologie
+          </li>
+          <li>
+            Discutez avec vos collègues les différents problèmes rencontrés dans
+            les tests utilisateurs et essayez de faire une synthèse des éléments
+            plutôt qu'un collage entre éléments séparés
+          </li>
+          <li>
+            Faites attention aux détails de forme dans votre rapport final
+            (erreurs orthographiques, etc.)
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 mb-0 py-5">
+      <div class="container">
+        <p xmlns:cc="http://creativecommons.org/ns#" class="mb-0">
+          This work is licensed under
+          <a
+            href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+            target="_blank"
+            rel="license noopener noreferrer"
+            style="display: inline-block"
+            class="link-light"
+            >CC BY-NC-SA 4.0<img
+              style="
+                height: 22px !important;
+                margin-left: 3px;
+                vertical-align: text-bottom;
+              "
+              src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img
+              style="
+                height: 22px !important;
+                margin-left: 3px;
+                vertical-align: text-bottom;
+              "
+              src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img
+              style="
+                height: 22px !important;
+                margin-left: 3px;
+                vertical-align: text-bottom;
+              "
+              src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /><img
+              style="
+                height: 22px !important;
+                margin-left: 3px;
+                vertical-align: text-bottom;
+              "
+              src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
+          /></a>
+        </p>
+      </div>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/ac5eb0c407.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
