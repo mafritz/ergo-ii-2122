@@ -73,25 +73,118 @@
         </div>
       </div>
     </nav>
-    <div class="container mt-4">
+    <div class="container mt-4" id="app">
       <h1 class="display-3">Portfolio des étudiant-es</h1>
       <p class="lead">
-        Les étudiant-es qui le souhaitent peuvent demander que leurs productions
-        soient publiées à cet endroit.
+        Cette page propose les projets des étudiant-es qui ont accepté de rendre
+        public leurs travaux. Les consignes pour les travaux sont disponibles
+        dans la page <a href="./livrables.html">des livrables</a>.
       </p>
 
-      <div class="text-center display-4 mb-4">
-        <i class="fas fa-hard-hat fa fa-5x"></i><br />
-        En construction
-      </div>
+      <!-- Rendu final -->
+      <section>
+        <h3>Conception d'une maquette interactive avec test utilisateur</h3>
+        <p>
+          Le projet principal du cours consiste dans un travail en binôme divisé
+          en trois étapes : (i) conception d'une première version d'une maquette
+          interactive suite à la récolte d'information pendant le cours ERGO I
+          (e.g., analyse des besoins, trie de cartes, ...) ; (ii) planification,
+          passation et analyse de résultat d'un test utilisateur ; et (iii)
+          conception d'une deuxième version de la maquette interactive suite aux
+          retours du test utilisateur.
+        </p>
 
-      <p class="lead text-center alert alert-info">
-        <i class="fa fa-info-circle"></i>
-        Dans l'attente, vous pouvez visiter
-        <a href="https://mafritz.ch/ergo-ii-2021/portfolio.html"
-          ><strong>le portfolio du cours de l'année 2020/2021</strong></a
-        >.
-      </p>
+        <div class="row row-cols-1 row-cols-md-3 g-5 text-center">
+          <!-- Projets -->
+          <div class="col" v-for="project in orderedProjects">
+            <div class="card h-100 shadow">
+              <img
+                v-bind:src="project.img"
+                class="card-img-top"
+                v-bind:alt="project.title"
+                v-bind:title="project.title"
+              />
+              <div class="card-body border-top border-gray">
+                <h4 class="card-title">{{project.title}}</h4>
+                <p class="card-text lead">
+                  {{project.author1}}<br />{{project.author2}}
+                </p>
+              </div>
+              <div class="btn-group mb-3 mx-4">
+                <a
+                  v-bind:href="project.v1"
+                  class="btn btn-outline-danger btn-lg"
+                  aria-current="page"
+                  ><i class="fa fa-sitemap"></i> Version 1</a
+                >
+                <a
+                  v-bind:href="project.v2"
+                  class="btn btn-outline-danger btn-lg"
+                  aria-current="page"
+                  ><i class="fa fa-sitemap"></i> Version 2</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prototype mobile -->
+      <section class="mt-5">
+        <h3>Prototype mobile</h3>
+        <p>
+          Les étudiant-es ont créé un prototype mobile sur un sujet de leur
+          choix, en
+          <em>low-fi</em> ou <em>high-fi</em> et avec la technique de leur
+          préférence. Ils ont ensuite enregistré l'utilisation du prototype pour
+          montrer les fonctionnalités interactives.
+        </p>
+
+        <div class="row row-cols-1 row-cols-md-4 g-5 text-center">
+          <!-- Vidéos -->
+          <div class="col text-center" v-for="prototype in orderedPrototypes">
+            <div class="card h-100 shadow">
+              <video
+                v-bind:src="prototype.video_url"
+                controls
+                style="min-width: 100% !important; height: 170px"
+                class="mt-0 pt-0 mb-0 pb-0"
+              >
+                <p>
+                  Votre navigateur n’est pas compatible avec HTML5, veuillez
+                  considérer de le mettre à jour.
+                </p>
+              </video>
+              <div class="card-body">
+                <h4 class="card-title">{{prototype.title}}</h4>
+                <p class="card-text lead mb-0 pb-0">{{prototype.author}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Test A/B -->
+      <section class="mt-5">
+        <h3>Test A/B avec données fictives</h3>
+        <p>
+          Les étudiant-es ont proposé un protocole de passation pour un test A/B
+          avec deux variantes d'un site ou application de leur choix et une
+          mesure d'intérêt pour déterminer la meilleure version à garder. Sur la
+          base de la proposition, les étudiant-es ont obtenu un jeu de données
+          fictif, afin d'effectuer un test statistique pour départager les deux
+          versions.
+        </p>
+        <div class="lead list-group">
+          <a
+            v-for="test in orderedTests"
+            v-bind:href="test.url"
+            class="list-group-item list-group-item-action px-3 py-3"
+            ><i class="fa pr-4 fa-file-pdf"></i> Rapport du Test A/B de
+            {{test.author}}</a
+          >
+        </div>
+      </section>
     </div>
 
     <footer class="bg-dark text-white mt-5 mb-0 py-5">
@@ -148,5 +241,217 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/app.js"></script>
+
+    <!-- Vue.js -->
+    <script src="./assets/vendor/vuejs/vue.global.js"></script>
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            //Projects
+            projects: [
+              {
+                title: "Le Basket Savoyard",
+                author1: "Tamara Crétard",
+                author2: "Celina Marques Teixeira",
+                img: "./assets/portfolio/projets/le-basket-savoyard.png",
+                v1: "https://www.figma.com/proto/RAA43AkRWPWCGc0vc535sC/Basketball-et-BCSJ_Version1?page-id=0%3A1&node-id=148%3A68&viewport=241%2C48%2C0.04&scaling=min-zoom&starting-point-node-id=148%3A68&hotspot-hints=0&hide-ui=1",
+                v2: "https://www.figma.com/proto/Ryq3RbhVSrvZ3638lGtMLa/Basketball-et-BCSJ_Version2?page-id=0%3A1&node-id=499%3A768&viewport=241%2C48%2C0.47&scaling=min-zoom&starting-point-node-id=499%3A768&hotspot-hints=0&hide-ui=1",
+              },
+              {
+                title: "eSport Zone",
+                author1: "Nicolas Hervy",
+                author2: "Hélène Parmentier",
+                img: "./assets/portfolio/projets/esport-zone.png",
+                v1: "https://www.figma.com/proto/89nKVZIWYFeJTs4OI5uEej/eSport-Zone---v1?node-id=23%3A94&scaling=scale-down&page-id=10%3A2&starting-point-node-id=23%3A94&hotspot-hints=0&hide-ui=1",
+                v2: "https://www.figma.com/proto/4k6IvcmKd0KSt0bJsJIqdk/eSport-Zone---v2?node-id=574%3A310&scaling=scale-down&page-id=10%3A2&starting-point-node-id=30%3A136&hotspot-hints=0&hide-ui=1",
+              },
+              {
+                title: "Kalypto",
+                author1: "Sara Cousin",
+                author2: "Manish Kumar",
+                img: "./assets/portfolio/projets/kalypto.png",
+                v1: "https://www.figma.com/proto/K6pBFUQSizS4wSpsdEwnan/Plong%C3%A9e-sous-marine-%7C-Sara-et-Manish?node-id=293%3A2005&scaling=contain&page-id=10%3A2&starting-point-node-id=293%3A2005&hotspot-hints=0&hide-ui=1",
+                v2: "https://www.figma.com/proto/K6pBFUQSizS4wSpsdEwnan/Plong%C3%A9e-sous-marine-%7C-Sara-et-Manish?node-id=346%3A2023&scaling=contain&page-id=346%3A1912&starting-point-node-id=346%3A2023&hotspot-hints=0&hide-ui=1",
+              },
+              {
+                title: "La Crème Fleurette",
+                author1: "Victoria Gilles",
+                author2: "Lorain Freléchoux",
+                img: "./assets/portfolio/projets/la-creme-fleurette.png",
+                v1: "https://www.figma.com/proto/QuLpmL6rlcUZW8iERgJOHu/Projet-cuisine-V1?page-id=0%3A1&node-id=2%3A2&viewport=241%2C48%2C0.05&scaling=scale-down&starting-point-node-id=54%3A869&show-proto-sidebar=1&hide-ui=1",
+                v2: "https://www.figma.com/proto/eGMzQAC7VubykXQpLqFAwh/Projet-cuisine-V2?page-id=0%3A1&node-id=47%3A588&viewport=241%2C48%2C0.5&scaling=scale-down&starting-point-node-id=47%3A588&hotspot-hints=0&hide-ui=1",
+              },
+              {
+                title: "Sak’sébon",
+                author1: "Gaëtan Basset",
+                author2: "Nicola Zanetti",
+                img: "./assets/portfolio/projets/sakesbon.png",
+                v1: "https://www.figma.com/proto/aRp20wRw8DbGCKJttqzNGN/Sak%C3%A9?node-id=470%3A7789&scaling=min-zoom&page-id=470%3A7788&starting-point-node-id=470%3A7789&hotspot-hints=0&hide-ui=1",
+                v2: "https://www.figma.com/proto/aRp20wRw8DbGCKJttqzNGN/Sak%C3%A9?node-id=580%3A36700&scaling=min-zoom&page-id=363%3A5221&starting-point-node-id=580%3A36700&hotspot-hints=0&hide-ui=1",
+              },
+              {
+                title: "Sakura Sambo",
+                author1: "Larissa Santos Vieira",
+                author2: "Elodie Haefliger",
+                img: "./assets/portfolio/projets/sakuro-sambo.png",
+                v1: "https://www.figma.com/proto/Yl7FZXxLh2Aebp6M3xHKuI/maquette-sambo?node-id=65%3A852&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=65%3A852&hotspot-hints=0&hide-ui=1",
+                v2: "https://www.figma.com/proto/Yl7FZXxLh2Aebp6M3xHKuI/maquette-sambo?node-id=154%3A1130&scaling=min-zoom&page-id=154%3A901&starting-point-node-id=154%3A923&hotspot-hints=0&hide-ui=1",
+              },
+              {
+                title: "UniCode",
+                author1: "Loïc David",
+                author2: "Mohamed Amine Trabelsi",
+                img: "./assets/portfolio/projets/unicode.png",
+                v1: "https://www.figma.com/proto/J1dXBN6D4pZpx291b9lCD7/Projet-ERGO-II?node-id=104%3A329&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2&hotspot-hints=0&hide-ui=1",
+                v2: "https://www.figma.com/proto/1Sv3NZajw8kkQFO45pTIOW/Projet-ERGO-II-V2?node-id=104%3A329&scaling=scale-down&page-id=0%3A1&starting-point-node-id=104%3A329&hotspot-hints=0&hide-ui=1",
+              },
+            ],
+            //Prototypes mobiles
+            prototypes: [
+              {
+                title: "Sak'sébon",
+                author: "Gaëtan Basset",
+                video_url:
+                  "https://tecfaetu.unige.ch/perso/maltt/bassetg0/ERGO/ergo2/Saksebon_v2_Gaetan.mp4",
+              },
+              {
+                title: "La cuisine du saké",
+                author: "Nicola Zanetti",
+                video_url:
+                  "http://tecfaetu.unige.ch/etu-maltt/baldur/zanettn0/ergo-2/Nicola%20Zanetti%20-%20sake%20v2.mp4",
+              },
+              {
+                title: "TechTok",
+                author: "Lorain Freléchoux",
+                video_url:
+                  "http://tecfaetu.unige.ch/etu-maltt/baldur/frelech1/ergo2/TechTok_V2.mp4",
+              },
+              {
+                title: "Antenne Santé",
+                author: "Celina Marquez Teixeira",
+                video_url:
+                  "https://tecfaetu.unige.ch/etu-maltt/baldur/marqucd0/ergo-2/proto_antenne_sante.webm",
+              },
+              {
+                title: "FilmoCollec'",
+                author: "Tamara Crétard",
+                video_url:
+                  "https://tecfaetu.unige.ch/etu-maltt/baldur/cretard7/ergo-2/filmocollec.mp4",
+              },
+              {
+                title: "Kalypto",
+                author: "Sara Cousin",
+                video_url:
+                  "https://tecfaetu.unige.ch/etu-maltt/baldur/cousin8/ergo-2/KalyptoV2.mp4",
+              },
+              {
+                title: "eSport Zone",
+                author: "Hélène Parmentier",
+                video_url:
+                  "http://tecfaetu.unige.ch/etu-maltt/baldur/parment1/ergo/proto-mobile-v2.webm",
+              },
+              {
+                title: "Rando Planner",
+                author: "Larissa Santos Vieira",
+                video_url:
+                  "http://tecfaetu.unige.ch/etu-maltt/baldur/santola0/ergo-2/Rando_Planner_V2.webm",
+              },
+              {
+                title: "eSport Zone",
+                author: "Nicolas Hervy",
+                video_url:
+                  "http://tecfaetu.unige.ch/etu-maltt/baldur/hervy9/ergo-2/maquette-mobile/v2/Prototype_mobile_interactif_v2-eSport%20Zone-HervyNicolas.mp4",
+              },
+              {
+                title: "Agenda mobile",
+                author: "Elodie Haefliger",
+                video_url:
+                  "http://tecfaetu.unige.ch/etu-maltt/aegir/haeflie0/ergo/prototype-mobile/agenda-mobile_v2.mp4",
+              },
+              {
+                title: "Uparq",
+                author: "Victoria Gilles",
+                video_url:
+                  "http://tecfaetu.unige.ch/etu-maltt/baldur/gilles1/ergo-2/uparq_v2_ergo_victoria.mp4",
+              },
+              {
+                title: "UniCode",
+                author: "Loïc David",
+                video_url:
+                  "https://tecfaetu.unige.ch/etu-maltt/volt/venni6/baldur_2122/videos/%20Loic_David_ERGO2_prototype-mobile_v2.mp4",
+              },
+              {
+                title: "Kalypto",
+                author: "Manish Kumar",
+                video_url:
+                  "https://tecfaetu.unige.ch/etu-maltt/volt/venni6/baldur_2122/videos/Manish_Kumar_Kalypto_mobile_v2.mp4",
+              },
+              {
+                title: "Mohamed Amine Trabelsi",
+                author: "MoveBox",
+                video_url:
+                  "https://tecfaetu.unige.ch/etu-maltt/volt/venni6/baldur_2122/videos/%20Mohamed_Amine_MoveBox_v2.mp4",
+              },
+            ],
+          };
+        },
+        computed: {
+          orderedProjects: function () {
+            return this.projects.sort(function (a, b) {
+              first = a.title.toLowerCase();
+              second = b.title.toLowerCase();
+
+              if (first > second) {
+                return 1;
+              } else if (first < second) {
+                return -1;
+              } else {
+                return 0;
+              }
+            });
+          },
+          orderedPrototypes: function () {
+            return this.prototypes.sort(function (a, b) {
+              first = a.title.toLowerCase();
+              second = b.title.toLowerCase();
+
+              if (first > second) {
+                return 1;
+              } else if (first < second) {
+                return -1;
+              } else {
+                return 0;
+              }
+            });
+          },
+          orderedTests: function () {
+            let tests = this.orderedPrototypes.map(function (item) {
+              return {
+                author: item.author,
+                url:
+                  "./assets/portfolio/test-ab/" +
+                  item.author.split(" ")[0].toLowerCase() +
+                  ".pdf",
+              };
+            });
+            return tests.sort(function (a, b) {
+              first = a.author.toLowerCase();
+              second = b.author.toLowerCase();
+
+              if (first > second) {
+                return 1;
+              } else if (first < second) {
+                return -1;
+              } else {
+                return 0;
+              }
+            });
+          },
+        },
+      }).mount("#app");
+    </script>
   </body>
 </html>
